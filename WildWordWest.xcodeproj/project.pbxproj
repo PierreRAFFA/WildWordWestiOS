@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F57C4181C9ED5420024F2C0 /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F57C4171C9ED5420024F2C0 /* GameEvent.swift */; };
 		8FBD6B121C9DD3B200EADD6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD6B111C9DD3B200EADD6F /* AppDelegate.swift */; };
 		8FBD6B141C9DD3B200EADD6F /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8FBD6B131C9DD3B200EADD6F /* GameScene.sks */; };
 		8FBD6B161C9DD3B200EADD6F /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD6B151C9DD3B200EADD6F /* GameScene.swift */; };
-		8FBD6B181C9DD3B200EADD6F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD6B171C9DD3B200EADD6F /* GameViewController.swift */; };
 		8FBD6B1B1C9DD3B200EADD6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBD6B191C9DD3B200EADD6F /* Main.storyboard */; };
 		8FBD6B1D1C9DD3B200EADD6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBD6B1C1C9DD3B200EADD6F /* Assets.xcassets */; };
 		8FBD6B201C9DD3B200EADD6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBD6B1E1C9DD3B200EADD6F /* LaunchScreen.storyboard */; };
 		8FBD6B2B1C9DD3B200EADD6F /* WildWordWestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD6B2A1C9DD3B200EADD6F /* WildWordWestTests.swift */; };
 		8FBD6B361C9DD3B300EADD6F /* WildWordWestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD6B351C9DD3B300EADD6F /* WildWordWestUITests.swift */; };
+		8FBD6B441C9E088900EADD6F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBD6B431C9E088900EADD6F /* GameKit.framework */; };
+		8FBD6B461C9E1B4D00EADD6F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD6B451C9E1B4D00EADD6F /* HomeViewController.swift */; };
+		8FBD6B4A1C9EC24900EADD6F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD6B491C9EC24900EADD6F /* MainController.swift */; };
+		8FBD6B4D1C9EC3D100EADD6F /* SplashscreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBD6B4C1C9EC3D100EADD6F /* SplashscreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F57C4171C9ED5420024F2C0 /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameEvent.swift; path = Event/GameEvent.swift; sourceTree = "<group>"; };
 		8FBD6B0E1C9DD3B200EADD6F /* WildWordWest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WildWordWest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBD6B111C9DD3B200EADD6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FBD6B131C9DD3B200EADD6F /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		8FBD6B151C9DD3B200EADD6F /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
-		8FBD6B171C9DD3B200EADD6F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8FBD6B1A1C9DD3B200EADD6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8FBD6B1C1C9DD3B200EADD6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FBD6B1F1C9DD3B200EADD6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,10 @@
 		8FBD6B311C9DD3B300EADD6F /* WildWordWestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WildWordWestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBD6B351C9DD3B300EADD6F /* WildWordWestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WildWordWestUITests.swift; sourceTree = "<group>"; };
 		8FBD6B371C9DD3B300EADD6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FBD6B431C9E088900EADD6F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		8FBD6B451C9E1B4D00EADD6F /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8FBD6B491C9EC24900EADD6F /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainController.swift; path = Controller/MainController.swift; sourceTree = "<group>"; };
+		8FBD6B4C1C9EC3D100EADD6F /* SplashscreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SplashscreenViewController.swift; path = View/SplashscreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FBD6B441C9E088900EADD6F /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +87,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F57C4161C9ED52B0024F2C0 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				8F57C4171C9ED5420024F2C0 /* GameEvent.swift */,
+			);
+			name = Event;
+			sourceTree = "<group>";
+		};
 		8FBD6B051C9DD3B200EADD6F = {
 			isa = PBXGroup;
 			children = (
+				8FBD6B431C9E088900EADD6F /* GameKit.framework */,
 				8FBD6B101C9DD3B200EADD6F /* WildWordWest */,
 				8FBD6B291C9DD3B200EADD6F /* WildWordWestTests */,
 				8FBD6B341C9DD3B300EADD6F /* WildWordWestUITests */,
@@ -101,10 +119,13 @@
 		8FBD6B101C9DD3B200EADD6F /* WildWordWest */ = {
 			isa = PBXGroup;
 			children = (
+				8F57C4161C9ED52B0024F2C0 /* Event */,
+				8FBD6B4B1C9EC39C00EADD6F /* View */,
+				8FBD6B481C9EC15E00EADD6F /* Model */,
+				8FBD6B471C9EC15700EADD6F /* Controller */,
 				8FBD6B111C9DD3B200EADD6F /* AppDelegate.swift */,
 				8FBD6B131C9DD3B200EADD6F /* GameScene.sks */,
 				8FBD6B151C9DD3B200EADD6F /* GameScene.swift */,
-				8FBD6B171C9DD3B200EADD6F /* GameViewController.swift */,
 				8FBD6B191C9DD3B200EADD6F /* Main.storyboard */,
 				8FBD6B1C1C9DD3B200EADD6F /* Assets.xcassets */,
 				8FBD6B1E1C9DD3B200EADD6F /* LaunchScreen.storyboard */,
@@ -129,6 +150,30 @@
 				8FBD6B371C9DD3B300EADD6F /* Info.plist */,
 			);
 			path = WildWordWestUITests;
+			sourceTree = "<group>";
+		};
+		8FBD6B471C9EC15700EADD6F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8FBD6B491C9EC24900EADD6F /* MainController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8FBD6B481C9EC15E00EADD6F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8FBD6B4B1C9EC39C00EADD6F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8FBD6B451C9E1B4D00EADD6F /* HomeViewController.swift */,
+				8FBD6B4C1C9EC3D100EADD6F /* SplashscreenViewController.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +244,12 @@
 				TargetAttributes = {
 					8FBD6B0D1C9DD3B200EADD6F = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 52TYNLP3KD;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					8FBD6B251C9DD3B200EADD6F = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -263,9 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F57C4181C9ED5420024F2C0 /* GameEvent.swift in Sources */,
 				8FBD6B161C9DD3B200EADD6F /* GameScene.swift in Sources */,
-				8FBD6B181C9DD3B200EADD6F /* GameViewController.swift in Sources */,
 				8FBD6B121C9DD3B200EADD6F /* AppDelegate.swift in Sources */,
+				8FBD6B461C9E1B4D00EADD6F /* HomeViewController.swift in Sources */,
+				8FBD6B4D1C9EC3D100EADD6F /* SplashscreenViewController.swift in Sources */,
+				8FBD6B4A1C9EC24900EADD6F /* MainController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,10 +461,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WildWordWest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pierreraffa.WildWordWest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -418,10 +475,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WildWordWest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pierreraffa.WildWordWest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -494,6 +554,7 @@
 				8FBD6B3C1C9DD3B300EADD6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FBD6B3D1C9DD3B300EADD6F /* Build configuration list for PBXNativeTarget "WildWordWestTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +563,7 @@
 				8FBD6B3F1C9DD3B300EADD6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8FBD6B401C9DD3B300EADD6F /* Build configuration list for PBXNativeTarget "WildWordWestUITests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +572,7 @@
 				8FBD6B421C9DD3B300EADD6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
