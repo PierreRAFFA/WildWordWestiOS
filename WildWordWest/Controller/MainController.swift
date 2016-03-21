@@ -13,15 +13,21 @@ class MainController: NSObject, GKGameCenterControllerDelegate {
     
     static let instance = MainController()
     
-    /** Specifies if the gameCenter is enable */
-    var gameCenterEnable = Bool();
+    /** Contains all player informations from GameCenter */
+    private var _gameCenterPlayer: GKLocalPlayer;
+    
+    /** Specifies if the GameCenter is enable */
+    private var _gameCenterEnable = Bool();
     
     /** LeaderBoardId */
-    var gameCenterLeaderBoardId: String? = String()
+    private var _gameCenterLeaderBoardId: String? = String()
+    
     
     ////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////// FOR SINGLETON
-    private override init() {}
+    private override init() {
+        self._gameCenterPlayer = GKLocalPlayer.localPlayer();
+    }
     
     ////////////////////////////////////////////////////////////////////////
     //////////////////////////////////////////////////////////// AUTHENTICATION
@@ -40,23 +46,22 @@ class MainController: NSObject, GKGameCenterControllerDelegate {
         @param viewController The view to display the gamecenter login page
      */
     private func authenticateToGameCenter(viewController: UIViewController) {
-        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
         
-        localPlayer.authenticateHandler = {(ViewController, error) -> Void in
+        self._gameCenterPlayer.authenticateHandler = {(ViewController, error) -> Void in
             if((ViewController) != nil) {
                 // Show login if player is not logged in
                 viewController.presentViewController(ViewController!, animated: true, completion: nil)
-            } else if (localPlayer.authenticated) {
+            } else if (self._gameCenterPlayer.authenticated) {
                 // Player is already authenticated & logged in, load game center
-                //self.gcEnabled = true
+                self._gameCenterEnable = true
                 
                 // Get the default leaderboard ID
-                localPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler({ (leaderboardIdentifer: String?, error: NSError?) -> Void in
+                self._gameCenterPlayer.loadDefaultLeaderboardIdentifierWithCompletionHandler({ (leaderboardIdentifer: String?, error: NSError?) -> Void in
                     if error != nil {
                         print(error)
                     } else {
                         print("authenticated after login");
-                        self.gameCenterLeaderBoardId = leaderboardIdentifer;
+                        self._gameCenterLeaderBoardId = leaderboardIdentifer;
                         self._getUserInformations();
                     }
                 })
@@ -64,7 +69,7 @@ class MainController: NSObject, GKGameCenterControllerDelegate {
                 
             } else {
                 // 3 Game center is not enabled on the users device
-                //self.gcEnabled = false
+                self._gameCenterEnable = false
                 print("Local player could not be authenticated, disabling game center")
                 print(error);
             }
@@ -76,10 +81,39 @@ class MainController: NSObject, GKGameCenterControllerDelegate {
     private func _getUserInformations() {
         print("_getUserInformations");
         
+        let url = NSURL(string:"https://localhost:3000/accounts/ios/")
         
-        NSNotificationCenter.defaultCenter().postNotificationName(
-            GameEvent.AuthenticationSuccess.rawValue,
-            object: nil);
+        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {
+            (responseData, responseUrl, error) -> Void in
+            
+            //force the thread to render
+            //dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                
+                // if responseData is not null...
+                if let data = responseData{
+                    
+                    if(error != nil) {
+                        print(error!.localizedDescription)
+                    }
+                    
+                    let results: AnyObject?;
+                    do  {
+                        results = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.AllowFragments);
+                    }catch _ {
+                        results = nil;
+                    }
+
+                    print(results);
+                    
+                    
+                    NSNotificationCenter.defaultCenter().postNotificationName(
+                        GameEvent.AuthenticationSuccess.rawValue,
+                        object: nil);
+                    
+                }
+            //});
+        }
+        task.resume();
     }
     
     
