@@ -1,1 +1,1 @@
-# WildWordWestiOS
+# WildWordWest (iOS)
